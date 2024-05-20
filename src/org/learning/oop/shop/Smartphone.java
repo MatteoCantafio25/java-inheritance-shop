@@ -6,6 +6,7 @@ public class Smartphone extends Product{
     private int code;
     private int imei;
     private int memory;
+    private int vat;
 
 
     // COSTRUTTORE
@@ -14,6 +15,7 @@ public class Smartphone extends Product{
         this.imei = imei;
         this.memory = memory;
         this.code = getRandomNumber();
+        this.vat = 22;
     }
 
 
@@ -38,5 +40,18 @@ public class Smartphone extends Product{
 
     public void setMemory(int memory) {
         this.memory = memory;
+    }
+
+    public int getVat(){
+        return vat;
+    }
+
+    public void setVat(int vat){
+        this.vat = vat;
+    }
+
+    public double getTaxedPrice(){
+        double tax =  getPrice() * 0.22;
+        return getPrice() + tax;
     }
 }

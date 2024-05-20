@@ -6,6 +6,7 @@ public class Television extends Product{
     private int code;
     private int size;
     private boolean isSmart;
+    private int vat;
 
     // COSTRUTTORE
     public Television(String name, String description, double price, int size, boolean isSmart) {
@@ -13,6 +14,7 @@ public class Television extends Product{
         this.size = size;
         this.isSmart = isSmart;
         this.code = getRandomNumber();
+        this.vat = 22;
     }
 
     // METODI
@@ -36,5 +38,18 @@ public class Television extends Product{
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public int getVat(){
+        return vat;
+    }
+
+    public void setVat(int vat){
+        this.vat = vat;
+    }
+
+    public double getTaxedPrice(){
+        double tax =  getPrice() * 0.22;
+        return getPrice() + tax;
     }
 }

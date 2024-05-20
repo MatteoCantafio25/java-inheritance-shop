@@ -49,6 +49,7 @@ public class Cart {
 
                 cart[i] = new Smartphone(productName, productDesc, productPrice, productImei,productMemory);
 
+                System.out.println(cart[i].getVat());
             } else if (itemType == 2) {
                 System.out.print("Enter the name of the television ");
                 productName = scanner.nextLine();

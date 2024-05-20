@@ -6,6 +6,7 @@ public class Headset extends Product {
     private int code;
     private String color;
     private boolean isWireless;
+     private int vat;
 
     // COSTRUTTORE
     public Headset(String name, String description, double price, String color, boolean isWireless) {
@@ -13,6 +14,7 @@ public class Headset extends Product {
         this.color = color;
         this.isWireless = isWireless;
         this.code = getRandomNumber();
+        this.vat = 22;
     }
 
 
@@ -36,5 +38,18 @@ public class Headset extends Product {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public int getVat(){
+        return vat;
+    }
+
+    public void setVat(int vat){
+        this.vat = vat;
+    }
+
+    public double getTaxedPrice(){
+        double tax =  getPrice() * 0.22;
+        return getPrice() + tax;
     }
 }
