@@ -40,8 +40,9 @@ public class Television extends Product{
         this.size = size;
     }
 
+    @Override
     public double getTaxedPrice(){
-        double tax =  getPrice() * 0.22;
-        return getPrice() + tax;
+        double tax =  super.getPrice() * 0.22;
+        return super.getPrice() + tax;
     }
 }

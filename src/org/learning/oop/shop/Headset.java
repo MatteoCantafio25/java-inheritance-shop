@@ -40,8 +40,9 @@ public class Headset extends Product {
         this.color = color;
     }
 
+    @Override
     public double getTaxedPrice(){
-        double tax =  getPrice() * 0.22;
-        return getPrice() + tax;
+        double tax =  super.getPrice() * 0.22;
+        return super.getPrice() + tax;
     }
 }
