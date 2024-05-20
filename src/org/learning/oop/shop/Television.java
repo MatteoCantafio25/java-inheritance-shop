@@ -40,14 +40,6 @@ public class Television extends Product{
         this.size = size;
     }
 
-    public int getVat(){
-        return vat;
-    }
-
-    public void setVat(int vat){
-        this.vat = vat;
-    }
-
     public double getTaxedPrice(){
         double tax =  getPrice() * 0.22;
         return getPrice() + tax;
